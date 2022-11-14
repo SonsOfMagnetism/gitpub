@@ -14,5 +14,12 @@
 </style>
 <body>
     <h1>Welcome to gitPub</h1>
+    <ul>
+        <% for(let i=0; i<allDrinks.length; i++) { %>
+            <li>
+                <a href="/models/drinks/<%=i%>"><%=allDrinks[i].name[0].toUpperCase() + allDrinks[i].name.substring(1) %></a>
+            </li>
+        <% } %>
+    </ul>
 </body>
 </html>
