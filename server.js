@@ -18,7 +18,7 @@ app.get('/drinks/', (req, res) => {
 app.get('/drinks/:id', (req, res) => {
     res.render("drinks_show.ejs", {
         drink: drinks[req.params.id],
-        id: req.params.id
+        id: req.params.id,
     })
 })
 
