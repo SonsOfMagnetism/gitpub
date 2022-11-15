@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drinks</title>
+    <title>Food</title>
 </head>
 <style>
     body {
@@ -13,10 +13,13 @@
     }
 </style>
 <body>
-    <h1>At foo bar</h1>
-    <h2><%=drink.name[0].toUpperCase()+ drink.name.substring(1) %></h2>
-    <img src="<%=drink.image.replace('.jpg', '.png') %>">
-    <h3><%=drink.price %></h3>
-    <a href="/drinks/">Back</a>
+    <h1>Welcome to gitPub</h1>
+    <ul>
+        <% for(let i=0; i<allFood.length; i++) { %>
+            <li>
+                <a href="/food/<%=i%>"><%=allFood[i].name[0].toUpperCase() + allFood[i].name.substring(1) %></a>
+            </li>
+        <% } %>
+    </ul>
 </body>
 </html>
